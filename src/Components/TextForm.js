@@ -16,6 +16,11 @@ export default function TextForm(props) {
         setText(newtext);
     };
 
+    const handleResetClick = () => {
+        let newtext = " ";
+        setText(newtext);
+    };
+
     const handleOnchange = (event) => {
         setText(event.target.value);
     };
@@ -40,7 +45,7 @@ export default function TextForm(props) {
             </div>
             <button className="btn btn-primary mx-2" onClick={handleUpClick}>Upper case</button>
             <button className="btn btn-primary mx-2" onClick={handleDownClick}>Lower case</button>
-            <button className="btn btn-primary mx-2" onClick={handleDownClick}>Lower case</button>
+            <button className="btn btn-primary mx-2" onClick={handleResetClick}>Reset</button>
 
             <div className="container my-4">
                 <h4>Text Summary:</h4>
